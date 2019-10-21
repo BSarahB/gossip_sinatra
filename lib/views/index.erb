@@ -8,11 +8,12 @@
       
           <h2>Voici tous les potins existants ! Oh my god !</h2>
 
-        <% gossips.each do |gossip| %>
+        <% gossips.each_with_index do |gossip, i| %>
         <p>
           <%= gossip.author %><br/>
-          <%= gossip.content %>
+          <%= gossip.content %> <a href="/gossips/<%=i%>">lien du potin </a>
         </p>
+
       <% end %>
   </body>
 
