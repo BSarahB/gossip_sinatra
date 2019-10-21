@@ -25,6 +25,10 @@ $ bundle install
 
 $ shotgun -p 4567
 
+and on your browser type http://localhost:4567/
+
+you ll be on the page of the gossip site!!
+
 
 
 
