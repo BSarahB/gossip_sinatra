@@ -1,12 +1,12 @@
-require 'csv'
+  require 'csv'
 
 class Gossip
-	attr_accessor :content, :author
+  attr_accessor :content, :author
 
   def initialize(author, content)
 
     @content = content
-	  @author = author
+    @author = author
   end
     
 
@@ -19,9 +19,9 @@ class Gossip
   end
   
   def self.all
-  # 1)création d'un array vide qui s'appelle all_gossips
+      # 1)création d'un array vide qui s'appelle all_gossips
       all_gossips = []
-  #2)chaque ligne de ton CSV.each do |ligne|
+      #2)chaque ligne de ton CSV.each do |ligne|
       file = CSV.read("./db/gossip.csv")
       file.each do |ligne|
  	#ligne nous renvoie un array avec les 2 strings du gossip ["sarah", "pas de potins"]
@@ -29,9 +29,9 @@ class Gossip
       all_gossips << gossip_provisoire
       end
       	
-  # 3)return all_gossips - on renvoie le résultat
-  return all_gossips
-end
+      #3)return all_gossips - on renvoie le résultat
+      return all_gossips
+  end
  
   def self.find(id)
     id = id.to_i # on convertit la string en integer pour pouvoir renseigner l index de l array just en dessous
